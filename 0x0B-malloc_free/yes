@@ -7,7 +7,7 @@
 * @str: The string to split.
 *
 * Return: If str is NULL or contains only whitespace - NULL,
-*         Otherwise - a pointer to an array of strings (words).
+* Otherwise - a pointer to an array of strings (words).
 */
 char **strtow(char *str)
 {
