@@ -1,17 +1,17 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
 /**
-* main - Entry point for the program
-* @argc: The number of command-line arguments passed to the program
-* @argv: An array of strings representing the command-line arguments
+* main - multiplies two positive numbers
+* @argc: argument count
+* @argv: argument vector
 *
-* Return: 0 on success, 1 on failure
+* Return: 0 on success, 1 on error
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int i, j, len1, len2, sum, tens, *result;
+int len1, len2, i, j, n1, n2, carry, sum, *result;
 if (argc != 3 || !is_positive_number(argv[1]) || !is_positive_number(argv[2]))
 {
 printf("Error\n");
@@ -19,50 +19,46 @@ return (1);
 }
 len1 = strlen(argv[1]);
 len2 = strlen(argv[2]);
-result = _calloc(len1 + len2, sizeof(int));
+result = (int *) calloc(len1 + len2, sizeof(int));
 if (result == NULL)
-{
-printf("Error\n");
 return (1);
-}
 for (i = len1 - 1; i >= 0; i--)
 {
-tens = 0;
+n1 = argv[1][i] - '0';
+carry = 0;
 for (j = len2 - 1; j >= 0; j--)
 {
-sum = (argv[1][i] - '0') * (argv[2][j] - '0') + result[i + j + 1] + tens;
+n2 = argv[2][j] - '0';
+sum = n1 *n2 + result[i + j + 1] + carry;
+carry = sum / 10;
 result[i + j + 1] = sum % 10;
-tens = sum / 10;
 }
-result[i + j + 1] = tens;
+if (carry)
+result[i + j + 1] = carry;
 }
-i = 0;
-while (i < len1 + len2 && result[i] == 0)
-i++;
-if (i == len1 + len2)
-_putchar('0');
+if (result[0] == 0)
+i = 1;
 else
-{
+i = 0;
 for (; i < len1 + len2; i++)
-_putchar(result[i] + '0');
-}
-_putchar('\n');
+putchar(result[i] + '0');
+putchar('\n');
 free(result);
 return (0);
 }
 /**
-* is_positive_number - Checks if a string represents a positive number
-* @s: The string to check
+* is_positive_number - checks if a string represents a positive number
+* @s: the string to check
 *
-* Return: 1 if the string represents a positive number, 0 otherwise
+* Return: 1 if @s represents a positive number, 0 otherwise
 */
 int is_positive_number(char *s)
 {
-int i;
-for (i = 0; s[i] != '\0'; i++)
+while (*s)
 {
-if (s[i] < '0' || s[i] > '9')
+if (*s < '0' || *s > '9')
 return (0);
+s++;
 }
 return (1);
 }
