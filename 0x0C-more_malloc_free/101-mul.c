@@ -2,6 +2,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+int is_positive_number(char *s);
 /**
 * main - multiplies two positive numbers
 * @argc: argument count
