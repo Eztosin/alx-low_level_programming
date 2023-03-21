@@ -6,6 +6,6 @@
 */
 int main(void)
 {
-printf("Hello, ALX\n");
+printf("%s\n", _FILE_);
 return (0);
 }
