@@ -6,7 +6,7 @@
 * @name: name of the dog (string)
 * @age: age of the dog (float)
 * @owner: owner of the dog (string)
-* @init_dog: variable initialized
+*
 * Description: defines a structure for a dog with its name, age and owner.
 */
 typedef struct dog
