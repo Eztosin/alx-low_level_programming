@@ -5,3 +5,12 @@ Hello C World
 0x04-more_functions_nested_loops
 0x05-pointers_arrays_strings
 0x06-pointers_arrays_strings
+0x07-pointers_arrays_strings
+0x08-recursion
+0x0A-argc_argv
+0x0B-malloc_free
+0x0C-more_malloc_free
+0x0D-preprocessor
+0x0E-structures_typedef
+Testrunning Pointers_and_arrays
+
