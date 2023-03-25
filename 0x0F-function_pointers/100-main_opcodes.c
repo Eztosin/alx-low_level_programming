@@ -21,7 +21,7 @@ return (1);
 bytes = atoi(argv[1]);
 if (bytes < 0)
 {
-printf("Error\n");
+printf("Error: number of bytes is negative\n");
 return (2);
 }
 opcodes = (char *)main;
