@@ -15,5 +15,5 @@ while (current)
 sum += current->n;
 current = current->next;
 }
-return sum;
+return (sum);
 }
