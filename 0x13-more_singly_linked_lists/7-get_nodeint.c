@@ -17,5 +17,5 @@ while (current != NULL && i < index)
 current = current->next;
 i++;
 }
-return current;
+return (current);
 }
