@@ -4,6 +4,8 @@
 /**
 * _pow_recursion - A function that returns the value a variable
 * raised to the power of another variable.
+* @x: The base number.
+* @y: The power.
 * Return: -1 If power variable is less than 0.
 */
 int _pow_recursion(int x, int y)
