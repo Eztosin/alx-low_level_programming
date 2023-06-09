@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
 * main - This program multiplies two numbers on the command line.
-* @argc - Counts the arguments on the command line.
-* @argv - Argument vector.
+* @argc: Used to count the argument on command line.
+* @argv: Used to intialize the variable j.
 * Return: Always 0.
 */
 int main(int argc, char *argv[])
@@ -13,7 +13,7 @@ if (argc > 1)
 {
 for (j = 1; j < argc; j++)
 {
-mul = mul * atoi(argv[j]);
+mul = mul *atoi(argv[j]);
 }
 printf("%d\n", mul);
 }
