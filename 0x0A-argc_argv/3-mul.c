@@ -13,7 +13,8 @@ if (argc > 1)
 {
 for (j = 1; j < argc; j++)
 {
-mul = mul *atoi(argv[j]);
+int k = strtol(argv[j], NULL, 10);
+mul = mul *k;
 }
 printf("%d\n", mul);
 }
