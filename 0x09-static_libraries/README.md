@@ -1,0 +1,1 @@
+This file contains all files of the projects carried out in C programming and can be used as a single entity. 
