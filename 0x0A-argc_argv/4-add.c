@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
-* main - This program adds two numbers on the command line.
+* main - This program adds positive numbers on the command line.
 * @argc: Used to count the argument on command line.
 * @argv: Used in a loop and checks if variable j is a digit.
 * Return: Always 0.
