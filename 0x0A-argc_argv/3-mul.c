@@ -20,6 +20,7 @@ printf("%d\n", mul);
 if (argc == 1)
 {
 printf("Error\n");
+return (1);
 }
 return (0);
 }
