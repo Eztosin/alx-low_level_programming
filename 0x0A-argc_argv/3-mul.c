@@ -17,7 +17,7 @@ mul = mul *atoi(argv[j]);
 }
 printf("%d\n", mul);
 }
-if (argc <= 1)
+if (argc == 1)
 {
 printf("Error\n");
 }
