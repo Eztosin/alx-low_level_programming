@@ -18,3 +18,7 @@ I've learnt in the alx software engineering program.
 -0x07-pointers_arrays_strings
 
 -0x08-recursion
+
+-0x09-static_libraries
+
+-0x0A. C - argc, argv
