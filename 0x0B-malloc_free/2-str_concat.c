@@ -2,8 +2,10 @@
 #include "main.h"
 #include <stdlib.h>
 /**
-*
-*
+* str_concat- This function puts the contents of a string into another.
+* @s1: Initail string.
+* @s2: String to combine with s1
+* Return: NULL if function fails.
 */
 char *str_concat(char *s1, char *s2)
 {
@@ -15,6 +17,10 @@ ch = malloc(((w + x) + 1) * sizeof(char));
 if (ch == NULL)
 {
 return (NULL);
+}
+if (s1 == NULL && s2 == NULL)
+{
+return ('\0');
 }
 for (y = 0; s1[y] != '\0'; y++)
 {

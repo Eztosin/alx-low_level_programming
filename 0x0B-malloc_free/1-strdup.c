@@ -17,7 +17,11 @@ while (str[j] != '\0')
 j++;
 }
 ch = malloc((j *sizeof(char)) + 1);
-if (ch == NULL || str == NULL)
+if (ch == NULL)
+{
+return (NULL);
+}
+if (str == NULL)
 {
 return (NULL);
 }
