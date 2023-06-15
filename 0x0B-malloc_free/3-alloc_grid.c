@@ -22,9 +22,5 @@ if (ptr == NULL)
 {
 return (NULL);
 }
-if (ptr[j] == NULL)
-{
-free (ptr[j]);
-}
 return (ptr);
 }
