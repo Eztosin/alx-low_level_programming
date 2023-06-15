@@ -12,9 +12,9 @@ char *str_concat(char *s1, char *s2)
 char *ch;
 int w, x, y, z;
 if (s1 == NULL)
-w = 0;
+s1 = "";
 if (s2 == NULL)
-x = 0;
+s2 = "";
 for (w = 0; s1[w] != '\0'; w++)
 for (x = 0; s2[x] != '\0'; x++)
 ch = malloc(((w + x) + 1) * sizeof(char));
