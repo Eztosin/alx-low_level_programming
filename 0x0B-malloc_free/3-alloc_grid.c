@@ -14,11 +14,7 @@ int **ptr, j;
 ptr = malloc(width * sizeof(int *));
 for (j = 0; j < width; j++)
 ptr[j] = malloc(height * sizeof(int));
-if (width == 0)
-{
-return (NULL);
-}
-if (height == 0)
+if (width <= 0 || height <= 0)
 {
 return (NULL);
 }
