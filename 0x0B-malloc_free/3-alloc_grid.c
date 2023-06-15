@@ -26,9 +26,5 @@ if (ptr[j] == NULL)
 {
 free (ptr[j]);
 }
-if (ptr == NULL)
-{
-free (ptr);
-}
 return (ptr);
 }
