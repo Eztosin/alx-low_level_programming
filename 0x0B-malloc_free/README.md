@@ -1,4 +1,5 @@
-This directory contains functions on memory allocation which can only be accessed through pointers.
+This directory contains functions on memory allocation which can only
+be accessed through pointers.
 The following projects were carried out under this concept.
 
 -A function that creates an array of chars, and initializes it with a specific char.
@@ -18,4 +19,9 @@ The returned pointer should point to a newly allocated space in memory which con
 if NULL is passed, treat it as an empty string
 The function should return NULL on failure.
 
--
+-A function that returns a pointer to a 2 dimensional array of
+integers.
+Prototype: int **alloc_grid(int width, int height);
+Each element of the grid should be initialized to 0
+The function should return NULL on failure
+If width or height is 0 or negative, return NULL.
