@@ -27,9 +27,9 @@ if (ptr[j] == NULL)
 {
 for (k = j; k >= 0; k--)
 {
-free (ptr[k]);
+free(ptr[k]);
 }
-free (ptr);
+free(ptr);
 }
 }
 return (ptr);
