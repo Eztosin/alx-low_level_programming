@@ -3,10 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *
- *
- *
- */
+* _calloc- Allocates a emory for an array using malloc.
+* @nmemb: array of elements.
+* @size: size of elements in bytes
+* Return: NULL.
+*/
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 char *ch;
