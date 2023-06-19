@@ -22,3 +22,9 @@ I've learnt in the alx software engineering program.
 -0x09-static_libraries
 
 -0x0A. C - argc, argv
+
+-0x0B-malloc_free
+
+-0x0C-more_malloc_free
+
+-0x0D-preprocessor
