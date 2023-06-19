@@ -9,5 +9,9 @@ The following projects were expressed in this file;
 the token 3.14159265359.
 
 - A program that prints the name of the file it was compiled from, followed by a new line.
-
 You are allowed to use the standard library.
+
+-A function-like macro ABS(x) that computes the absolute value
+of a number x
+
+-A function-like macro SUM(x, y) that computes the sum of the numbers x and y.
