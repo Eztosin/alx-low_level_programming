@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "dog.h"
 /**
-*
-*
+* print_dog- Print struct dog
+* @d: Tagname
 */
 void print_dog(struct dog *d)
 {
@@ -14,7 +14,8 @@ else
 {
 printf("Name: %s\n", d->name);
 }
-if (d->age == 0.0) {
+if (d->age == 0.0)
+{
 printf("Age: (nil)\n");
 }
 else
