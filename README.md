@@ -1,5 +1,5 @@
 This repository contains all the concepts of C programming language
-I've learnt in the alx software engineering program.
+I learnt in the alx software engineering program.
 
 -Hello C World
 
@@ -27,4 +27,6 @@ I've learnt in the alx software engineering program.
 
 -0x0C-more_malloc_free
 
--0x0D-preprocessor
+-0x0D-preprocessor.
+
+-0x0E. C - Structures, typedef
