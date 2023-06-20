@@ -1,6 +1,5 @@
-#ifndef DOG
-#define DOG
-#define DOG_NEW
+#ifndef DOG_H
+#define DOG_H
 /**
 * struct dog - A new structure definition.
 * @name: character name.
@@ -13,7 +12,7 @@ char *name;
 float age;
 char *owner;
 };
-typedef struct dog new;
+typedef struct dog dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 
