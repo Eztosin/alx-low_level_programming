@@ -22,5 +22,12 @@ return (NULL);
 create_dog->name = strdup(name);
 create_dog->owner = strdup(owner);
 create_dog->age = age;
+if (create_dog->name == NULL || create_dog->owner == NULL)
+{
+free(create_dog->name);
+free(create_dog->owner);
+free(create_dog);
+return (NULL);
+}
 return (create_dog);
 }
