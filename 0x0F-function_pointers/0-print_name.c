@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 #include <unistd.h>
-#include <string.h>
+
 /**
 * print_name- Function that prints a name.
 * @name: char name to be printed.
