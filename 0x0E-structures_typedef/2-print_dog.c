@@ -20,7 +20,7 @@ printf("Name: %s\n", d->name);
 }
 if (d->age == 0.000000)
 {
-printf("Age: (nil)\n");
+printf("Age: %.6f\n", d->age);
 }
 else
 {
