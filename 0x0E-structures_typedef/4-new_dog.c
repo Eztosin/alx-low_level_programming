@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-* new_dog - a function that creates a new dog, which holds the copy of the
-* initial.
+* new_dog - a function that creates a new dog, which holds the copy
+* of the initial.
 * @name: new dog name.
 * @age: new dog age.
 * @owner: the owner.
