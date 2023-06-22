@@ -23,6 +23,8 @@ else
 printf("%s", ch);
 if (separator != NULL && i < n - 1)
 printf("%s", separator);
+if (separator == NULL)
+return;
 }
 printf("\n");
 va_end(strings);
