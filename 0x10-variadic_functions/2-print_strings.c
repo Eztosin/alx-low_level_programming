@@ -14,8 +14,6 @@ unsigned int i;
 va_list strings;
 char *ch;
 va_start(strings, n);
-if (separator == NULL)
-return;
 for (i = 0; i < n; i++)
 {
 ch = va_arg(strings, char *);
@@ -23,6 +21,8 @@ if (ch == NULL)
 printf("nil\n");
 else
 printf("%s", ch);
+if (separator == NULL)
+return;
 if (separator != NULL && i < n - 1)
 printf("%s", separator);
 }
