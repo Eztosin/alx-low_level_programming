@@ -19,7 +19,7 @@ va_start(numbers, n);
 if (n == 0)
 return (0);
 
-for(j = 0; j < n; j++)
+for (j = 0; j < n; j++)
 result = result + va_arg(numbers, int);
 va_end(numbers);
 return (result);
