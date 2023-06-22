@@ -13,9 +13,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 unsigned int i;
 va_list strings;
 char *ch;
+
+va_start(strings, n);
 if (separator == NULL)
 return;
-va_start(strings, n);
 for (i = 0; i < n; i++)
 {
 ch = va_arg(strings, char *);
