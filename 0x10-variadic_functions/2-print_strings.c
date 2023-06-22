@@ -15,8 +15,6 @@ va_list strings;
 char *ch;
 
 va_start(strings, n);
-if (separator == NULL)
-return;
 for (i = 0; i < n; i++)
 {
 ch = va_arg(strings, char *);
