@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 #include <stdarg.h>
+/**
+* print_all- a function that prints all datatype passed as arguments.
+* @format: List of types of arguments passed.
+* Return: nothing
+*/
+
 
 void print_all(const char * const format, ...)
 {
