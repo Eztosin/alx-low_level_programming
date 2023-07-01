@@ -12,7 +12,7 @@ return;
 }
 if (d->name == NULL)
 {
-printf("Name: (nil)");
+printf("Name: (nil)\n");
 }
 else
 {
