@@ -27,7 +27,6 @@ if (create_dog->name == NULL || create_dog->owner == NULL)
 free(create_dog->name);
 free(create_dog->owner);
 free(create_dog);
-return (NULL);
 }
 return (create_dog);
 }
