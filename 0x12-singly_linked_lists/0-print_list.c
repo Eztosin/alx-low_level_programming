@@ -12,7 +12,7 @@ const list_t *ch;
 size_t count = 1;
 if (h == NULL)
 {
-return (count);
+return (0);
 }
 ch = h;
 while (ch->next != NULL)
