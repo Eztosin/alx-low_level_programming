@@ -2,7 +2,7 @@
 #include "lists.h"
 /**
 * print_list - A function that prints all elements of a list_t list.
-* @h: pointer to head of list.
+* @h: pointer to list head.
 * Return: Number of elements counted.
 */
 
