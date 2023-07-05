@@ -19,10 +19,10 @@ return (NULL);
 }
 newptr->n = n;
 newptr->next = NULL;
-if(*head == NULL)
+if (*head == NULL)
 {
 *head = newptr;
-}   
+}
 else
 {
 ch = *head;
