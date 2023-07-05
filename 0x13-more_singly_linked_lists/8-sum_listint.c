@@ -13,7 +13,7 @@ int add = 0;
 ch = head;
 if (head == NULL)
 return (0);
- 
+
 while (ch != NULL)
 {
 add = add + ch->n;
