@@ -7,7 +7,8 @@
 * Return: Elements counted.
 */
 
-size_t print_listint(const listint_t *h){
+size_t print_listint(const listint_t *h)
+{
 const listint_t *ch;
 size_t count = 1;
 if (h == NULL)
@@ -15,7 +16,7 @@ if (h == NULL)
 return (0);
 }
 ch = h;
-while (ch-> next != NULL)
+while (ch->next != NULL)
 {
 printf("%d\n", ch->n);
 ch = ch->next;
