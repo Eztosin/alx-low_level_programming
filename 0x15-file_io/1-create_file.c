@@ -22,7 +22,7 @@ return (-1);
 if (text_content == NULL)
 text_content = "";
 
-if(text_content != NULL)
+if (text_content != NULL)
 while (text_content[txt_len])
 txt_len++;
 
