@@ -1,5 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#define BUFFER_CAP 1024
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
