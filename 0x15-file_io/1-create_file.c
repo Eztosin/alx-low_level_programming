@@ -15,7 +15,7 @@ if (filename == NULL)
 return (-1);
 
 if (text_content == NULL)
-text_content = "";
+text_content = " ";
 
 if (text_content != NULL)
 {
@@ -27,12 +27,12 @@ if (fd == -1)
 return (-1);
 
 if (text_content != NULL)
+{
 wrttn_bytes = write(fd, text_content, txt_len);
-
 if (wrttn_bytes == -1)
 close(fd);
 return (-1);
-
+}
 close(fd);
 return (1);
 }
