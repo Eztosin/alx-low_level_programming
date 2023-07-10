@@ -20,8 +20,10 @@ text_content = " ";
 if (text_content != NULL)
 {
 for (txt_len = 0; text_content[txt_len] != '\0'; txt_len++)
-fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+;
 }
+fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+
 
 if (fd == -1)
 return (-1);
