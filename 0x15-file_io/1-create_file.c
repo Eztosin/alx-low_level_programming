@@ -13,7 +13,7 @@ int fd, wrttn_bytes, txt_len;
 
 if (filename == NULL)
 return (-1);
-  
+
 if (text_content != NULL)
 {
 for (txt_len = 0; text_content[txt_len] != '\0'; txt_len++)
