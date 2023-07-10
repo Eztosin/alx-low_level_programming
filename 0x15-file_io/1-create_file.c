@@ -14,9 +14,6 @@ int fd, wrttn_bytes, txt_len;
 if (filename == NULL)
 return (-1);
 
-if (text_content == NULL)
-text_content = " ";
-
 if (text_content != NULL)
 {
 for (txt_len = 0; text_content[txt_len] != '\0'; txt_len++)
@@ -24,6 +21,8 @@ for (txt_len = 0; text_content[txt_len] != '\0'; txt_len++)
 }
 fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
+if (text_content == NULL)
+text_content = "";
 
 if (fd == -1)
 return (-1);
