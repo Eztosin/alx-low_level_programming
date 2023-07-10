@@ -13,7 +13,7 @@ int fd, wrttn_bytes, txt_len = 0;
 
 if (filename == NULL)
 return (-1);
- 
+
 fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
 if (fd == -1)
