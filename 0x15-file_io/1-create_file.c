@@ -25,11 +25,8 @@ return (-1);
 if (text_content != NULL)
 {
 wrttn_bytes = write(fd, text_content, txt_len);
-if (wrttn_bytes == -1)
-{
 close(fd);
-return (-1);
-}
+return (wrttn_bytes);
 }
 
 close(fd);
