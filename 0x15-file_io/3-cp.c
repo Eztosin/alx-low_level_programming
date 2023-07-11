@@ -77,4 +77,6 @@ if ((close(fd1)) == -1 || (close(fd2)) == -1)
 dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
 exit(100);
 }
+close(fd1);
+close(fd2);
 }
