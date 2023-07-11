@@ -12,6 +12,7 @@ void copy_file_from_to(const char *file_from, const char *file_to);
 int main(int argc, char **argv)
 {
 const char *file_from, *file_to;
+
 if (argc != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -21,6 +22,7 @@ file_from = argv[1];
 file_to = argv[2];
 
 copy_file_from_to(file_from, file_to);
+
 return (0);
 }
 
@@ -52,6 +54,7 @@ fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd2 == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+close(fd1);
 exit(99);
 }
 
@@ -62,6 +65,8 @@ wrttn_bytes = write(fd2, buffer, read_bytes);
 if (wrttn_bytes == -1 || wrttn_bytes != read_bytes)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+close(fd1);
+close(fd2);
 exit(99);
 }
 }
