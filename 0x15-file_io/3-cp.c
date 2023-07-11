@@ -1,53 +1,75 @@
 #include "main.h"
 
+void copy_file_from_to(const char *file_from, const char *file_to);
+
 /**
 * main - copies the content of a file to another.
 * @argc: argument count.
-* @argv: argumrnt vector.
+* @argv: argument vector.
 * Return: Always 0.
 */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-
-char ch[BUFFER_CAP];
 const char *file_from, *file_to;
-ssize_t bytes_read, wrttn_bytes;
-int fd, fd1;
+if (argc != 3)
+{
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+exit(97);
+}
 file_from = argv[1];
 file_to = argv[2];
 
-if (argc != 3)
-{
-dprintf(STDERR_FILENO, "%s", "Usage: cp file_from file_to%d\n");
-exit(97);
+copy_file_from_to(file_from, file_to);
+return (0);
 }
 
-fd = open(file_from, O_RDONLY);
-if (fd == -1)
+
+/**
+* copy_file_from_to -a function that copies the content of
+* a file to another.
+* @file_from: source file.
+* @file_to: destination file.
+* Return: Nothing.
+*/
+
+void copy_file_from_to(const char *file_from, const char *file_to)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from fd %s\n", file_from);
+int fd1, fd2;
+ssize_t read_bytes, wrttn_bytes;
+char buffer[BUFFER_CAP];
+
+/* open and read the source file */
+fd1 = open(file_from, O_RDONLY);
+if (fd1 == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 exit(98);
 }
 
-fd1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-if (fd1 == -1)
+/* open the destination file to write */
+fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+if (fd2 == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to file_to %s\n", file_to);
-close(fd1);
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 exit(99);
 }
 
-while ((bytes_read = read(fd, ch, BUFFER_CAP)) > 0)
+/* copy from source file to destination file */
+while ((read_bytes = read(fd1, buffer, BUFFER_CAP)) > 0)
 {
-wrttn_bytes = write(fd1, ch, bytes_read);
-if (wrttn_bytes != bytes_read)
-dprintf(STDERR_FILENO, "Error: Can't close %d\n", fd1);
-close(fd);
-close(fd1);
+wrttn_bytes = write(fd2, buffer, read_bytes);
+if (wrttn_bytes == -1 || wrttn_bytes != read_bytes)
+{
+dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+exit(99);
+}
+}
+
+/* close the file descriptor */
+if ((close(fd1)) == -1 || (close(fd2)) == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
 exit(100);
 }
-close(fd);
-close(fd1);
-return (0);
 }
