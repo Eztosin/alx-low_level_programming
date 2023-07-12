@@ -45,7 +45,7 @@ char buffer[BUFFER_CAP];
 fd1 = open(file_from, O_RDONLY);
 if (fd1 == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_from);
+dprintf(STDERR_FILENO, "Error: Can't read file from %s\n", file_from);
 close(fd1);
 exit(98);
 }
@@ -75,7 +75,8 @@ exit(99);
 /* close the file descriptor */
 if ((close(fd1)) == -1 || (close(fd2)) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd\n");
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 exit(100);
 }
 close(fd1);
