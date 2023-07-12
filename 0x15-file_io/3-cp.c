@@ -45,7 +45,7 @@ char buffer[BUFFER_CAP];
 fd1 = open(file_from, O_RDONLY);
 if (fd1 == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_from);
 exit(98);
 }
 
@@ -53,7 +53,7 @@ exit(98);
 fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd2 == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 close(fd1);
 exit(99);
 }
@@ -64,7 +64,7 @@ while ((read_bytes = read(fd1, buffer, BUFFER_CAP)) > 0)
 wrttn_bytes = write(fd2, buffer, read_bytes);
 if (wrttn_bytes == -1 || wrttn_bytes != read_bytes)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 close(fd1);
 close(fd2);
 exit(99);
@@ -74,7 +74,7 @@ exit(99);
 /* close the file descriptor */
 if ((close(fd1)) == -1 || (close(fd2)) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close file descriptor\n");
+dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 exit(100);
 }
 close(fd1);
