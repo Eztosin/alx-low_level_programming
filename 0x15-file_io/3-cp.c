@@ -46,6 +46,7 @@ fd1 = open(file_from, O_RDONLY);
 if (fd1 == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_from);
+close(fd1);
 exit(98);
 }
 
@@ -54,7 +55,7 @@ fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 if (fd2 == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
-close(fd1);
+close(fd2);
 exit(99);
 }
 
