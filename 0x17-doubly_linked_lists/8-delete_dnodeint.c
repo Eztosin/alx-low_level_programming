@@ -24,7 +24,10 @@ free(ptr_n);
 return (1);
 }
 while (ptr_n != NULL && i < index)
+{
 ptr_n = ptr_n->next;
+i++;
+}
 
 if (ptr_n == NULL)
 return (-1);
