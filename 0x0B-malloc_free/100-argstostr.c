@@ -12,20 +12,22 @@ char *argstostr(int ac, char **av)
 {
 int i, j, k, length = 0;
 char *ch;
+
 if (ac == 0 || av == NULL)
 {
 return (NULL);
 }
+
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
-length += j;
+length ++;
 }
 ch = malloc((length + 1) * sizeof(char));
+
 if (ch == NULL)
-{
 return (NULL);
-}
+
 for (i = 0, k = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++, k++)
