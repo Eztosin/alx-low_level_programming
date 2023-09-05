@@ -8,6 +8,7 @@
 * @av:array of pointers.
 * Return: NULL if it fails
 */
+
 char *argstostr(int ac, char **av)
 {
 int i, j, k, length = 0;
@@ -21,7 +22,7 @@ return (NULL);
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
-length ++;
+length++;
 }
 ch = malloc((length + 1) * sizeof(char));
 
