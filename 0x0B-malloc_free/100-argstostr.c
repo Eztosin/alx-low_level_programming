@@ -22,7 +22,9 @@ return (NULL);
 for (i = 0; i < ac; i++)
 {
 for (j = 0; av[i][j] != '\0'; j++)
+{
 length += j;
+}
 length++;
 }
 ch = malloc((length + 1) * sizeof(char));
