@@ -45,6 +45,8 @@ I learnt in the alx software engineering program.
 
 -0x15-file_io
 
+-Shell (peer project)
+
 -0x17-doubly_linked_lists
 
 -0x18-dynamic_libraries
