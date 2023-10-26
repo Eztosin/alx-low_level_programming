@@ -2,6 +2,10 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
+RM = rm -f
+EMACS_FILES = *~ .*~
+VIM_FILES = *.swp
+TEMP_FILES = $(EMACS_FILES) $(VIM_FILES)
 
 all: $(NAME)
 
@@ -12,4 +16,11 @@ $(NAME): $(OBJ)
 	$(CC) -c $<
 
 clean:
-	rm -f $(OBJ) $(NAME)
+	$(RM) $(TEMP_FILES) $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
