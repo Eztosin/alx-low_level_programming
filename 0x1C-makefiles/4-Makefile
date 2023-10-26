@@ -3,6 +3,7 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
+RM = rm -f
 
 all: $(NAME)
 
@@ -13,10 +14,10 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -c $<
 
 clean:
-	rm -f $(TEMP_FILES) $(NAME)
+	$(RM) $(TEMP_FILES) $(NAME)
 
 oclean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
