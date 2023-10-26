@@ -1,0 +1,25 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $<
+
+clean:
+	rm -f $(TEMP_FILES) $(NAME)
+
+oclean:
+	rm -f $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+TEMP_FILES = $(wildcard *~ .*~ *.swp)
