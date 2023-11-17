@@ -1,5 +1,5 @@
 ### This repository contains all the concepts of C programming language
-I learnt in the alx software engineering program.
+### I learnt in the alx software engineering program.
 
 - Hello C World
 
